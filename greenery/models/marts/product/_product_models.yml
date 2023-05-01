@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: fact_page_views
+    description: Page views by product by day 
+    columns:
+      - name: product_id
+        tests: 
+
+      - name: date
+        tests: 
+          - not_null
+      - name: total_views_per_day
+        tests: 
+          - not_null
+          - positive_values
+
+  - name: fact_order_summary
+    description: Order information by user
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+      - name: num_orders
+        tests: 
+          - not_null
+      - name: num_diff_products
+        tests:
+          - not_null
+          - positive_values
+      - name: total_items
+        tests:
+          - not_null
+          - positive_values
+      - name: total_spent
+        tests:
+          - not_null
+          - positive_values
+      - name: avg_num_orders
+        tests:
+          - not_null
+          - positive_values
+      - name: avg_spend_per_order
+        tests:
+          - not_null
+          - positive_values
