@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_users
+    description: ""
+    columns:
+      - name: USER_ID
+        tests:
+          - not_null
+      - name: FIRST_NAME
+      - name: LAST_NAME
+      - name: EMAIL
+      - name: PHONE_NUMBER
+      - name: ADDRESS
+      - name: ZIPCODE
+      - name: STATE
+      - name: COUNTRY
+      - name: CREATED_AT
+      - name: UPDATED_AT

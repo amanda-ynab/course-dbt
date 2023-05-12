@@ -1,0 +1,11 @@
+version: 2
+
+macros:
+  - name: event_type_macro
+    description: Generates SQL to summarize all event types
+    docs:
+      show: true
+    arguments:
+      - name: event_type
+        type: 'string'
+        description: 'Sum all event types'

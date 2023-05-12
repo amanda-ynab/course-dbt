@@ -7,7 +7,7 @@ models:
       - name: product_id
         tests: 
 
-      - name: date
+      - name: event_date
         tests: 
           - not_null
       - name: total_views_per_day
@@ -45,3 +45,28 @@ models:
         tests:
           - not_null
           - positive_values
+
+  - name: fact_conversions
+    description: Conversion information by unique session
+    columns:
+      - name: product_name
+        tests:
+          - not_null
+      - name: num_page_views
+        tests:
+          - positive_values
+      - name: num_add_to_cart
+        tests:
+          - positive_values
+      - name: num_checkout
+        tests:
+          - positive_values
+
+
+  - name: fact_event_counts
+    description: Aggregate info on events
+    columns:
+      - name: product_id
+      - name: event_type
+        tests:
+          - not_null

@@ -10,7 +10,7 @@ models:
       - name: event_type
         tests: 
           - not_null
-      - name: date
+      - name: event_date
         tests: 
           - not_null
       - name: total_per_day
@@ -40,3 +40,18 @@ models:
         tests:
           - not_null
           - positive_values
+  - name: int_products_agg
+    description: Events by product
+    columns:
+      - name: product_name
+        tests:
+        - not_null
+      - name: num_checkout
+        tests:
+        - positive_values
+      - name: num_add_to_cart
+        tests:
+        - positive_values
+      - name: num_page_views
+        tests:
+        - positive_values

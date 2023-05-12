@@ -6,7 +6,7 @@
 
 SELECT
   product_id,
-  date,
+  event_date,
   total_per_day as total_views_per_day
 FROM {{ ref('int_events_agg') }} 
 WHERE event_type = 'page_view'

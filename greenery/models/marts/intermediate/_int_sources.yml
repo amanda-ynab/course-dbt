@@ -25,3 +25,8 @@ sources:
         loaded_at_field: created_at
         description: >
           Aggregate order information by order_id 
+
+      - name: products_agg
+        loaded_at_field: created_at
+        description: >
+          Aggregate event data by product

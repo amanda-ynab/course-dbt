@@ -25,3 +25,13 @@ sources:
         loaded_at_field: created_at
         description: >
           Overall order information by user 
+
+      - name: fact_conversions
+        loaded_at_field: created_at
+        description: >
+          Conversion information by unique session
+
+      - name: fact_event_counts
+        loaded_at_field: created_at
+        description: >
+          Aggregate event info by product
